@@ -1,0 +1,17 @@
+{
+  "name": "projeto-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npm run build && http-server . -p 8080",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "http-server": "^14.1.1",
+    "typescript": "^7.0.2"
+  }
+}

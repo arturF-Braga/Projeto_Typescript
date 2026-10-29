@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - Loja de Jogos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Catálogo de Jogos</h1>
+
+  <section id="resumo">
+    <p>Total de Jogos: <span id="total-jogos">0</span></p>
+    <p>Disponíveis: <span id="total-disponiveis">0</span></p>
+    <p>Esgotados: <span id="total-esgotados">0</span></p>
+  </section>
+
+  <section id="cadastro">
+  <h2>Cadastrar Jogo</h2>
+  <form id="form-jogo">
+    <input type="text" id="titulo" placeholder="Título do Jogo" required />
+    <select id="categoria">
+      <option value="RPG">RPG</option>
+      <option value="Ação">Ação</option>
+      <option value="Aventura">Aventura</option>
+      <option value="Esporte">Esporte</option>
+    </select>
+    <input type="number" id="preco" step="0.01" placeholder="Preço (R$)" required />
+    <label>
+      <input type="checkbox" id="disponivel" checked /> Disponível em estoque
+    </label>
+    <button type="submit">Cadastrar</button>
+  </form>
+</section>
+
+  <section id="filtros">
+    <h2>Filtros</h2>
+    <input type="text" id="busca" placeholder="Buscar por título..." />
+    <select id="filtro-categoria">
+      <option value="Todas">Todas as Categorias</option>
+      <option value="RPG">RPG</option>
+      <option value="Ação">Ação</option>
+      <option value="Aventura">Aventura</option>
+      <option value="Esporte">Esporte</option>
+    </select>
+  </section>
+
+  <section id="catalogo">
+    <h2>Jogos Cadastrados</h2>
+    <div id="lista-jogos"></div>
+  </section>
+
+  <script type="module" src="dist/index.js"></script>
+</body>
+</html>
